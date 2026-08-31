@@ -760,22 +760,15 @@ section {
     border-radius: 20px;
 }
 
-/* ================= RESPONSIVE / MOBILE VIEW ================= */
+/* =========================================================
+   RESPONSIVE / MOBILE VIEW
+   Home & About Image Keep Laptop Structure
+   ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* ===== GLOBAL ===== */
-    body {
-        overflow-x: hidden;
-    }
+    /* ================= HEADER ================= */
 
-    section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* ===== HEADER ===== */
     .header {
         padding: 15px 5%;
         height: auto;
@@ -792,7 +785,7 @@ section {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 5px;
     }
 
     .navbar a {
@@ -801,19 +794,25 @@ section {
         margin-right: 8px;
     }
 
-    /* ===== HOME ===== */
+
+    /* ================= HOME ================= */
+
     .home {
         min-height: 100vh;
         height: auto;
         padding: 150px 5% 60px;
+
+        /* Mobile-এ image উপরে, text নিচে */
         flex-direction: column-reverse;
+
         justify-content: center;
+        align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 25px;
     }
 
     .home-content {
-        max-width: 100%;
+        max-width: 600px;
         width: 100%;
     }
 
@@ -835,19 +834,44 @@ section {
         line-height: 1.6;
     }
 
-    /* ===== HOME IMAGE ===== */
+
+    /* ================= HOME IMAGE =================
+       Laptop structure kept:
+       width: 350px
+       height: 350px
+       image 300px
+       scale 1.2
+    */
+
     .home-img {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 350px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
     }
 
     .home-img img {
-        width: 220px;
-        height: 220px;
-        transform: scale(1);
+        width: 300px;
+        height: 300px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+        border: 3px solid #0ef;
+        box-shadow: 0 0 15px #0ef;
+
+        /* Laptop-এর একই scale */
+        transform: scale(1.2);
     }
 
-    /* ===== SOCIAL ICONS ===== */
+
+    /* ================= SOCIAL ICON ================= */
+
     .home-sci {
         display: flex;
         justify-content: center;
@@ -855,38 +879,81 @@ section {
     }
 
     .home-sci a {
-        width: 38px;
-        height: 38px;
-        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+
         margin: 20px 8px;
     }
 
-    /* ===== BUTTON ===== */
+
+    /* ================= BUTTON ================= */
+
     .btn-box {
         padding: 10px 22px;
         font-size: 14px;
     }
 
 
-    /* ================= ABOUT ================= */
+    /* =================================================
+       ABOUT SECTION
+       ================================================= */
 
     .about {
         min-height: auto;
+
         padding: 80px 5% 60px;
+
+        /*
+         Laptop-এর পাশাপাশি layout mobile-এ
+         সুন্দরভাবে উপরে-নিচে হবে
+        */
         flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
         gap: 25px;
         text-align: center;
     }
 
-    .about-img img {
-        width: 230px;
-        height: 230px;
-        transform: scale(1);
+
+    /* ================= ABOUT IMAGE =================
+       Laptop structure kept:
+       width: 300px
+       height: 300px
+       scale 0.8
+    */
+
+    .about-img {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
+    .about-img img {
+        width: 300px;
+        height: 300px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+        border: 3px solid #0ef;
+        box-shadow: 0 0 15px #0ef;
+
+        /* Laptop-এর একই scale */
+        transform: scale(0.8);
+    }
+
+
+    /* ================= ABOUT CONTENT ================= */
 
     .about-content {
         width: 100%;
-        max-width: 100%;
+        max-width: 600px;
     }
 
     .about-content h2 {
@@ -906,7 +973,7 @@ section {
     }
 
 
-    /* ===== RESEARCH INTERESTS ===== */
+    /* ================= RESEARCH INTERESTS ================= */
 
     .research-interests {
         margin-top: 25px;
@@ -990,7 +1057,9 @@ section {
     .container1 {
         width: 100%;
         height: auto;
+
         padding: 50px 7% 30px;
+
         margin-left: 0;
     }
 
@@ -1000,7 +1069,7 @@ section {
     }
 
 
-    /* ===== TECHNICAL SKILLS ===== */
+    /* ================= TECHNICAL SKILLS ================= */
 
     .Technical-bars {
         width: 100%;
@@ -1029,11 +1098,13 @@ section {
     }
 
 
-    /* ===== PROFESSIONAL SKILLS ===== */
+    /* ================= PROFESSIONAL SKILLS ================= */
 
     .professional-bars {
         width: 100%;
+
         grid-template-columns: 1fr 1fr;
+
         gap: 15px;
     }
 
@@ -1060,6 +1131,7 @@ section {
 
     .education {
         min-height: auto;
+
         padding: 80px 5% 50px;
     }
 
@@ -1074,8 +1146,11 @@ section {
 
     .education-box {
         flex-direction: column;
+
         text-align: center;
+
         gap: 15px;
+
         padding: 22px 15px;
     }
 
@@ -1107,12 +1182,18 @@ section {
         font-size: 13px;
         padding: 4px 10px;
     }
+
 }
 
 
-/* ================= SMALL MOBILE ================= */
+/* =========================================================
+   SMALL MOBILE
+   Only adjusts size so images don't overflow.
+   ========================================================= */
 
 @media (max-width: 480px) {
+
+    /* ================= HEADER ================= */
 
     .header {
         padding: 12px 3%;
@@ -1124,18 +1205,12 @@ section {
         margin-right: 5px;
     }
 
+
+    /* ================= HOME ================= */
+
     .home {
-        padding-top: 140px;
-    }
-
-    .home-img {
-        width: 220px;
-        height: 220px;
-    }
-
-    .home-img img {
-        width: 190px;
-        height: 190px;
+        padding: 140px 4% 50px;
+        gap: 15px;
     }
 
     .home-content h3 {
@@ -1150,6 +1225,70 @@ section {
         font-size: 14px;
     }
 
+
+    /* ================= HOME IMAGE ================= */
+
+    .home-img {
+        /*
+         Laptop structure-এর proportion রাখা হয়েছে,
+         শুধু ছোট phone-এর জন্য size কমানো হয়েছে।
+        */
+        width: 300px;
+        height: 300px;
+    }
+
+    .home-img img {
+        width: 260px;
+        height: 260px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+        border: 3px solid #0ef;
+        box-shadow: 0 0 15px #0ef;
+
+        transform: scale(1.1);
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about {
+        padding: 70px 4% 50px;
+    }
+
+
+    /* ================= ABOUT IMAGE ================= */
+
+    .about-img {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-img img {
+        width: 260px;
+        height: 260px;
+
+        object-fit: cover;
+        object-position: center;
+
+        border-radius: 50%;
+        border: 3px solid #0ef;
+        box-shadow: 0 0 15px #0ef;
+
+        /*
+         Laptop-এর scale 0.8-এর কাছাকাছি রাখা হয়েছে
+        */
+        transform: scale(0.9);
+    }
+
+
+    /* ================= ABOUT TEXT ================= */
+
     .about-content h2 {
         font-size: 34px;
     }
@@ -1162,9 +1301,15 @@ section {
         font-size: 14px;
     }
 
+
+    /* ================= SERVICES ================= */
+
     .sub-title {
         font-size: 34px;
     }
+
+
+    /* ================= SKILLS ================= */
 
     .container1 {
         padding-left: 5%;
@@ -1174,6 +1319,9 @@ section {
     .heading1 {
         font-size: 27px;
     }
+
+
+    /* ================= PROFESSIONAL SKILLS ================= */
 
     .professional-bars {
         gap: 8px;
@@ -1196,7 +1344,11 @@ section {
         font-size: 13px;
     }
 
+
+    /* ================= EDUCATION ================= */
+
     .education-container .heading1 {
         font-size: 32px;
     }
+
 }
