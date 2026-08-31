@@ -760,3 +760,443 @@ section {
     border-radius: 20px;
 }
 
+/* ================= RESPONSIVE / MOBILE VIEW ================= */
+
+@media (max-width: 768px) {
+
+    /* ===== GLOBAL ===== */
+    body {
+        overflow-x: hidden;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+        padding: 15px 5%;
+        height: auto;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    /* ===== HOME ===== */
+    .home {
+        min-height: 100vh;
+        height: auto;
+        padding: 150px 5% 60px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .home-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 22px;
+    }
+
+    .home-content h3:nth-of-type(2) {
+        margin-bottom: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 38px;
+        margin: 5px 0;
+    }
+
+    .home-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* ===== HOME IMAGE ===== */
+    .home-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .home-img img {
+        width: 220px;
+        height: 220px;
+        transform: scale(1);
+    }
+
+    /* ===== SOCIAL ICONS ===== */
+    .home-sci {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .home-sci a {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+        margin: 20px 8px;
+    }
+
+    /* ===== BUTTON ===== */
+    .btn-box {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about {
+        min-height: auto;
+        padding: 80px 5% 60px;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .about-img img {
+        width: 230px;
+        height: 230px;
+        transform: scale(1);
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 40px;
+    }
+
+    .about-content h4 {
+        font-size: 21px;
+        line-height: 1.5;
+        margin: 10px 0 20px;
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: left;
+    }
+
+
+    /* ===== RESEARCH INTERESTS ===== */
+
+    .research-interests {
+        margin-top: 25px;
+    }
+
+    .research-interests h3 {
+        font-size: 24px;
+    }
+
+    .research-list {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .research-item {
+        padding: 10px;
+    }
+
+    .research-item i {
+        font-size: 21px;
+    }
+
+    .research-item span {
+        font-size: 13px;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    #services {
+        padding: 70px 5% 50px;
+        font-size: 16px;
+    }
+
+    .sub-title {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+
+    .container {
+        padding: 0;
+        width: 100%;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 20px;
+    }
+
+    .services-list div {
+        padding: 25px;
+    }
+
+    .services-list div i {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .services-list div h2 {
+        font-size: 24px;
+    }
+
+    .services-list div p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .read {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+
+    /* ================= SKILLS ================= */
+
+    section {
+        flex-direction: column;
+    }
+
+    .container1 {
+        width: 100%;
+        height: auto;
+        padding: 50px 7% 30px;
+        margin-left: 0;
+    }
+
+    .heading1 {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+
+    /* ===== TECHNICAL SKILLS ===== */
+
+    .Technical-bars {
+        width: 100%;
+    }
+
+    .Technical-bars .bar {
+        margin: 30px 0;
+    }
+
+    .Technical-bars .bar .info span {
+        font-size: 15px;
+    }
+
+    .Technical-bars .bar > i {
+        font-size: 20px;
+    }
+
+    .Technical-bars .bar .progress-line {
+        width: 100%;
+        height: 5px;
+    }
+
+    .skill-percent {
+        font-size: 13px;
+        top: -23px;
+    }
+
+
+    /* ===== PROFESSIONAL SKILLS ===== */
+
+    .professional-bars {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .radial-bars {
+        width: 100%;
+        height: 150px;
+    }
+
+    .radial-bars svg {
+        width: 105px;
+        height: 105px;
+    }
+
+    .radial-bars .percentage {
+        font-size: 17px;
+    }
+
+    .radial-bars .text {
+        font-size: 14px;
+    }
+
+
+    /* ================= EDUCATION ================= */
+
+    .education {
+        min-height: auto;
+        padding: 80px 5% 50px;
+    }
+
+    .education-container {
+        width: 100%;
+    }
+
+    .education-container .heading1 {
+        font-size: 38px;
+        margin-bottom: 35px;
+    }
+
+    .education-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 22px 15px;
+    }
+
+    .education-logo {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .education-logo img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .education-content h2 {
+        font-size: 19px;
+    }
+
+    .education-content h3 {
+        font-size: 15px;
+    }
+
+    .education-content p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .education-content span {
+        font-size: 13px;
+        padding: 4px 10px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 12px 3%;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .home {
+        padding-top: 140px;
+    }
+
+    .home-img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home-img img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .home-content h3 {
+        font-size: 19px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content p {
+        font-size: 14px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .about-content h4 {
+        font-size: 18px;
+    }
+
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .sub-title {
+        font-size: 34px;
+    }
+
+    .container1 {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .heading1 {
+        font-size: 27px;
+    }
+
+    .professional-bars {
+        gap: 8px;
+    }
+
+    .radial-bars {
+        height: 140px;
+    }
+
+    .radial-bars svg {
+        width: 95px;
+        height: 95px;
+    }
+
+    .radial-bars .percentage {
+        font-size: 15px;
+    }
+
+    .radial-bars .text {
+        font-size: 13px;
+    }
+
+    .education-container .heading1 {
+        font-size: 32px;
+    }
+}
