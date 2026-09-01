@@ -354,15 +354,16 @@ body{
 
 /* ================= SKILLS SECTION ================= */
 
-section {
+.skills-section {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .container1 {
     width: 600px;
     height: auto;
-    padding: 0px 100px 75px;
+    padding: 0 100px 75px;
     margin-left: 120px;
 }
 
@@ -398,7 +399,6 @@ section {
     font-size: 17px;
     font-weight: 500;
     opacity: 0;
-    animation: showText 0.5s 1s linear forwards;
 }
 
 .Technical-bars .bar > i {
@@ -413,7 +413,6 @@ section {
     background-color: #000;
     transform: scaleX(0);
     transform-origin: left;
-    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 .Technical-bars .bar .progress-line span {
@@ -423,17 +422,17 @@ section {
     border-radius: 10px;
     transform: scaleX(0);
     transform-origin: left;
-    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
 
-/* Skill Percentage */
+/* ================= SKILL WIDTH ================= */
 
 .progress-line {
     position: relative;
 }
+
 .progress-line.html span {
-    width: 60%;;
+    width: 60%;
 }
 
 .progress-line.css span {
@@ -448,6 +447,8 @@ section {
     width: 60%;
 }
 
+
+/* ================= PERCENTAGE ================= */
 
 .skill-percent {
     position: absolute;
@@ -473,6 +474,7 @@ section {
     left: 60%;
 }
 
+
 /* ================= PROFESSIONAL SKILLS ================= */
 
 .professional-bars {
@@ -489,13 +491,15 @@ section {
 }
 
 
-/* SVG Circle */
+/* ================= SVG ================= */
 
 .radial-bars svg {
     position: absolute;
     top: 50%;
     left: 50%;
+
     transform: translate(-50%, -50%) rotate(-90deg);
+
     width: 120px;
     height: 120px;
 }
@@ -538,7 +542,7 @@ section {
 }
 
 
-/* Skill Name */
+/* ================= SKILL NAME ================= */
 
 .radial-bars .text {
     position: absolute;
@@ -553,65 +557,118 @@ section {
 }
 
 
-/* ================= ANIMATION ================= */
+/* =========================================================
+   SKILL ANIMATION
+   Animation starts only after JavaScript adds .animate
+   ========================================================= */
 
-.professional-bars .path-1 {
-    animation: progress1 1s 1s linear forwards;
+
+/* Technical text */
+
+.skills-section.animate
+.Technical-bars .bar .info span {
+
+    animation: showText 0.5s 0.2s linear forwards;
 }
 
-.professional-bars .path-2 {
-    animation: progress2 1s 1s linear forwards;
+
+/* Technical background line */
+
+.skills-section.animate
+.Technical-bars .bar .progress-line {
+
+    animation: animate 1s
+    cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-.professional-bars .path-3 {
-    animation: progress3 1s 1s linear forwards;
+
+/* Technical progress */
+
+.skills-section.animate
+.Technical-bars .bar .progress-line span {
+
+    animation: animate 1s 0.3s
+    cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
-.professional-bars .path-4 {
-    animation: progress4 1s 1s linear forwards;
+
+/* Professional circles */
+
+.skills-section.animate .path-1 {
+    animation: progress1 1s 0.3s linear forwards;
 }
 
-/* ================= ANIMATIONS ================= */
+.skills-section.animate .path-2 {
+    animation: progress2 1s 0.3s linear forwards;
+}
+
+.skills-section.animate .path-3 {
+    animation: progress3 1s 0.3s linear forwards;
+}
+
+.skills-section.animate .path-4 {
+    animation: progress4 1s 0.3s linear forwards;
+}
+
+
+/* ================= KEYFRAMES ================= */
 
 @keyframes animate {
+
     100% {
         transform: scaleX(1);
     }
+
 }
 
 @keyframes showText {
+
     100% {
         opacity: 1;
     }
+
 }
+
 
 /* ================= CIRCLE PROGRESS ================= */
 
 @keyframes progress1 {
+
     100% {
         stroke-dashoffset: 151;
     }
+
 }
 
 @keyframes progress2 {
+
     100% {
         stroke-dashoffset: 176;
     }
+
 }
 
 @keyframes progress3 {
+
     100% {
         stroke-dashoffset: 251;
     }
+
 }
 
 @keyframes progress4 {
+
     100% {
         stroke-dashoffset: 100;
     }
+
 }
 
+
+/* ================= OTHER ANIMATIONS ================= */
+
 @keyframes slideRight {
+
     0% {
         opacity: 0;
         transform: translateX(-100px);
@@ -619,10 +676,13 @@ section {
 
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
+
 }
-@keyframes slideLeft{
+
+@keyframes slideLeft {
+
     0% {
         opacity: 0;
         transform: translateX(100px);
@@ -630,10 +690,13 @@ section {
 
     100% {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateX(0);
     }
+
 }
-@keyframes slideTop{
+
+@keyframes slideTop {
+
     0% {
         opacity: 0;
         transform: translateY(100px);
@@ -641,10 +704,13 @@ section {
 
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
+
 }
-@keyframes slideBottom{
+
+@keyframes slideBottom {
+
     0% {
         opacity: 0;
         transform: translateY(-100px);
@@ -652,8 +718,9 @@ section {
 
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0);
     }
+
 }
 
 /* ================= EDUCATION SECTION ================= */
@@ -1050,8 +1117,9 @@ section {
 
     /* ================= SKILLS ================= */
 
-    section {
+    .skills-section {
         flex-direction: column;
+        width: 100%;
     }
 
     .container1 {
