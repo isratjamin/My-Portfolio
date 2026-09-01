@@ -1247,10 +1247,7 @@ body{
     /* ================= HOME IMAGE ================= */
 
     .home-img {
-        /*
-         Laptop structure-এর proportion রাখা হয়েছে,
-         শুধু ছোট phone-এর জন্য size কমানো হয়েছে।
-        */
+        
         width: 300px;
         height: 300px;
     }
@@ -1277,32 +1274,7 @@ body{
     }
 
 
-    /* ================= ABOUT IMAGE ================= */
-
-    .about-img {
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .about-img img {
-        width: 260px;
-        height: 260px;
-
-        object-fit: cover;
-        object-position: center;
-
-        border-radius: 50%;
-        border: 3px solid #0ef;
-        box-shadow: 0 0 15px #0ef;
-
-        /*
-         Laptop-এর scale 0.8-এর কাছাকাছি রাখা হয়েছে
-        */
-        transform: scale(0.9);
-    }
+    
 
 
     /* ================= ABOUT TEXT ================= */
