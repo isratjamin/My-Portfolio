@@ -1,35 +1,30 @@
-/* =========================================================
-   SKILLS SCROLL ANIMATION
-   ========================================================= */
-
 const skillsSection = document.querySelector("#skills");
-
-const skillsObserver = new IntersectionObserver(
-    (entries) => {
-
-        entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-                skillsSection.classList.add("animate");
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.25
-    }
-);
-
 
 if (skillsSection) {
 
+    const skillsObserver = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    skillsSection.classList.add("animate");
+
+                    // একবার animation হবে
+                    skillsObserver.unobserve(skillsSection);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
     skillsObserver.observe(skillsSection);
-
 }
-
 
 /* =========================================================
    TYPED TEXT
