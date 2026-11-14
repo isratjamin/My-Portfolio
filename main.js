@@ -11,7 +11,7 @@ if (skillsSection) {
 
                     skillsSection.classList.add("animate");
 
-                    // একবার animation হবে
+                
                     skillsObserver.unobserve(skillsSection);
                 }
 
